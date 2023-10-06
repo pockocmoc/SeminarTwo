@@ -1,7 +1,6 @@
 package com.pockocmoc.server;
 
 import com.pockocmoc.client.Client;
-import com.pockocmoc.client.ClientGUI;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -27,12 +26,6 @@ public class Server implements ServerView {
         }
     }
 
-    public void diconnectClientGUI(ClientGUI clientGUI) {
-        serverWindow.clientList.remove(clientGUI);
-        if (clientGUI != null) {
-            clientGUI.disconnectFromServer();
-        }
-    }
 
     @Override
     public boolean connectUser(Client client) {
